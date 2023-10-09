@@ -1,5 +1,7 @@
 package fluent;
 
+import fluent.fonts.FluentFonts;
+
 import javax.swing.plaf.basic.BasicTextFieldUI;
 import java.awt.*;
 

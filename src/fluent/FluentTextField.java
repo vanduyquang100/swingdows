@@ -1,6 +1,7 @@
 package fluent;
 
 import fluent.colors.FluentColors;
+import fluent.fonts.FluentFonts;
 
 import javax.swing.*;
 import javax.swing.text.*;
