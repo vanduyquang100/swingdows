@@ -1,22 +1,48 @@
 package fluent;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.awt.image.BufferedImage;
+
+import static fluent.fonts.FluentFonts.TITLE_LARGE;
 
 public class FluentFrame extends JFrame {
-    public FluentFrame(Color backgroundColor) {
-        super("");
-        setIconImage(new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB));
-        this.getContentPane().setBackground(backgroundColor);
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        JPanel content = new JPanel(new FlowLayout());
-        FluentButton button = new FluentButton("I agree");
-        button.setPreferredSize(new Dimension(130, 32));
-        button.setText("Nah");
-        FluentTextField textField = new FluentTextField("");
-        content.add(textField);
-        content.add(button);
-        this.add(content);
+    JTextArea textArea;
+    public FluentFrame(Color backgroundColor, String frameName) {
+        super(frameName);
+        getContentPane().setBackground(backgroundColor);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLayout(new BorderLayout());
+
+        JPanel headerPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 0, 0));
+        headerPanel.setBackground(backgroundColor);
+
+        textArea = new JTextArea(frameName);
+        textArea.setFont(TITLE_LARGE);
+        textArea.setBackground(backgroundColor);
+        textArea.setFocusable(false);
+        textArea.setEditable(false);
+        textArea.setMargin(new Insets(0, 0, 0, 0));
+        int leftMargin = 25;
+        int topMargin = 45;
+        textArea.setBorder(new EmptyBorder(topMargin, leftMargin, 0, 0));
+        headerPanel.add(textArea);
+
+        int headerPanelMaxHeight = 150;
+        headerPanel.setMaximumSize(new Dimension(Integer.MAX_VALUE, headerPanelMaxHeight));
+
+        super.add(headerPanel, BorderLayout.NORTH);
+
+        setVisible(true);
+    }
+
+    @Override
+    public void add(Component comp, Object constraints ) {
+        super.add(comp, BorderLayout.CENTER);
+    }
+
+    public void setTitle(String newName) {
+        super.setTitle(newName);
+        textArea.setText(newName);
     }
 }
