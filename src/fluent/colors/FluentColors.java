@@ -3,7 +3,7 @@ package fluent.colors;
 import java.awt.*;
 
 public class FluentColors {
-    public static final Color FRAME_BACKGROUND = Color.WHITE;
+    public static final Color FRAME_BACKGROUND = new Color(250, 250, 250);
     public static final Color FRAME_FOREGROUND = new Color(10, 10, 10);
     public static final Color DARK_OVERLAY = new Color(100, 100, 100);
     public static final Color LIGHT_OVERLAY = new Color(150, 150, 150);
