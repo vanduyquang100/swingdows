@@ -15,6 +15,10 @@ public class FluentColors {
     public static final Color PRIMARY_BUTTON_FOREGROUND_HOVERED = Color.WHITE;
     public static final Color PRIMARY_BUTTON_BACKGROUND_PRESSED = new Color(4, 62, 116);
     public static final Color PRIMARY_BUTTON_FOREGROUND_PRESSED = Color.WHITE;
+    public static final Color BUTTON_BACKGROUND_NORMAL = new Color(246, 246, 246);
+    public static final Color BUTTON_FOREGROUND_NORMAL = new Color(90, 90, 90);
+    public static final Color BUTTON_BACKGROUND_HOVERED = new Color(228, 228, 228);
+    public static final Color BUTTON_BACKGROUND_PRESSED = new Color(222, 222, 222);
     public static final Color FRAME_BORDER = new Color(229, 229, 229);
     public static final Color TEXT_FIELD_BORDER_FOCUS = new Color(0, 95, 184);
     public static final Color TEXT_FIELD_FILL_HOVERED = new Color(246, 246, 246);
